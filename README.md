@@ -5,8 +5,9 @@
   2.1. Choose language `en/ru`. For add more languag, write us https://discord.gg/4TJSZF4AWH
   2.2 Choose core `esx/eclipse`. 
 3. Installation:
-
 es_extended:
+
+
 
 1. Go to es_extended/client/main.lua
 2. Replace lines 260
