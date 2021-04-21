@@ -22,4 +22,35 @@ TriggerEvent('ECLIPSE:OpenCharacterCreatioMenu')
 ![image](https://user-images.githubusercontent.com/36680471/115523567-e02ffc00-a295-11eb-952d-5c6a5979817f.png)
 
 
+1. Go to esx_skin/server/main.lua
+2. Replace 5-25
+
+```lua
+RegisterServerEvent('esx_skin:save')
+AddEventHandler('esx_skin:save', function(skin)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local defaultMaxWeight = ESX.GetConfig().MaxWeight
+	local backpackModifier = Config.BackpackWeight[skin.bags_1]
+	local playerData = json.decode(skin)
+	if backpackModifier then
+		xPlayer.setMaxWeight(defaultMaxWeight + backpackModifier)
+	else
+		xPlayer.setMaxWeight(defaultMaxWeight)
+	end
+
+	MySQL.Async.execute('UPDATE users SET skin = @skin, firstname = @firstname, lastname = @lastname, dateofbirth = @dateofbirth, sex = @sex WHERE identifier = @identifier', {
+		['@skin'] = skin,
+		['@identifier'] = xPlayer.identifier,
+		['@firstname'] = playerData.CharacterName,
+		['@lastname'] = playerData.CharacterSurname,
+		['@dateofbirth'] = playerData.CharacterDateBirth,
+		['@sex'] = playerData.sex
+	})
+end)
+```
+![image](https://user-images.githubusercontent.com/36680471/115524910-4701e500-a297-11eb-9c6d-d3439a6e3829.png)
+
+
+
+
 
