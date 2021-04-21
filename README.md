@@ -1,10 +1,10 @@
 [ESX]Eclipse_CC
 
-1. Eclipse_CC in your resource directory
-2. Setting config `resources\eclipse_CC\config\config.json`
-  2.1. Choose language `en/ru`. For add more languag, write us https://discord.gg/4TJSZF4AWH
-  2.2 Choose core `esx/eclipse`. 
-3. Installation:
+Eclipse_CC in your resource directory
+Setting config `resources\eclipse_CC\config\config.json`
+  Choose language `en/ru`. For add more languag, write us https://discord.gg/4TJSZF4AWH
+  Choose core `esx/eclipse`. 
+Installation:
 es_extended:
 
 
