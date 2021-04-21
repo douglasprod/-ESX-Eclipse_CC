@@ -50,6 +50,17 @@ end)
 ```
 ![image](https://user-images.githubusercontent.com/36680471/115524910-4701e500-a297-11eb-9c6d-d3439a6e3829.png)
 
+skinchanger:
+1. Go to skinchanger/client/main.lua
+2. Add code 450-454
+```lua
+AddEventHandler('skinchanger:customizationUpdate', function(data)
+	Character = json.decode(data)
+	ApplySkin(Character)
+end)
+```
+
+
 
 
 
