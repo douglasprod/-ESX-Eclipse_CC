@@ -1,5 +1,9 @@
 [ESX]Eclipse_CC
 
+## Requirements
+- [skinchanger](https://github.com/ESX-Org/skinchanger)
+
+
 Eclipse_CC in your resource directory
 
 Setting config `resources\eclipse_CC\config\config.json`
@@ -8,7 +12,7 @@ Setting config `resources\eclipse_CC\config\config.json`
   
   Choose core `esx/eclipse`. 
   
-Installation:
+## Installation:
 
 esx_skin:
 
