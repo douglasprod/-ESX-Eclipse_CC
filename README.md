@@ -10,7 +10,7 @@ Setting config `resources\eclipse_CC\config\config.json`
   
 Installation:
 
-es_extended:
+esx_skin:
 
 
 
