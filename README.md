@@ -66,7 +66,9 @@ AddEventHandler('skinchanger:customizationUpdate', function(data)
 	ApplySkin(Character)
 end)
 ```
+Start your server.
 
+For more questions https://discord.gg/4TJSZF4AWH
 
 
 
