@@ -48,7 +48,8 @@ AddEventHandler('esx_skin:save', function(skin)
 	})
 end)
 ```
-![image](https://user-images.githubusercontent.com/36680471/115524910-4701e500-a297-11eb-9c6d-d3439a6e3829.png)
+![image](https://user-images.githubusercontent.com/36680471/115525598-eb842700-a297-11eb-96f0-01d883caa7e0.png)
+
 
 skinchanger:
 1. Go to skinchanger/client/main.lua
