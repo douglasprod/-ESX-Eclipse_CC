@@ -13,6 +13,8 @@ Setting config `resources\eclipse_CC\config\config.json`
   Choose language `en/ru`. For add more languag, write us https://discord.gg/4TJSZF4AWH
   
   Choose core `esx/eclipse`. 
+  ![image](https://user-images.githubusercontent.com/36680471/115527130-731e6580-a299-11eb-80bb-42e8ebe56d6e.png)
+
   
 ## Installation:
 
