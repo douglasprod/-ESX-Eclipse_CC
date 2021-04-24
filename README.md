@@ -32,20 +32,38 @@ TriggerEvent('ECLIPSE:OpenCharacterCreatioMenu')
 
 
 1. Go to esx_skin/server/main.lua
-2. Replace 5-25
+2. Replace
 
 ```lua
 RegisterServerEvent('esx_skin:save')
 AddEventHandler('esx_skin:save', function(skin)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local defaultMaxWeight = ESX.GetConfig().MaxWeight
-	local backpackModifier = Config.BackpackWeight[skin.bags_1]
+	-- local backpackModifier = Config.BackpackWeight[skin.bags_1]
+
+	-- if backpackModifier then
+	-- 	xPlayer.setMaxWeight(defaultMaxWeight + backpackModifier)
+	-- else
+	-- 	xPlayer.setMaxWeight(defaultMaxWeight)
+	-- end
+
+	MySQL.Async.execute('UPDATE users SET skin = @skin WHERE identifier = @identifier', {
+		['@skin'] = json.encode(skin),
+		['@identifier'] = xPlayer.identifier
+	})
+end)
+
+RegisterServerEvent('esx_skin:saveData')
+AddEventHandler('esx_skin:saveData', function(skin)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local defaultMaxWeight = ESX.GetConfig().MaxWeight
+	--local backpackModifier = Config.BackpackWeight[skin.bags_1]
 	local playerData = json.decode(skin)
-	if backpackModifier then
-		xPlayer.setMaxWeight(defaultMaxWeight + backpackModifier)
-	else
-		xPlayer.setMaxWeight(defaultMaxWeight)
-	end
+	-- if backpackModifier then
+	-- xPlayer.setMaxWeight(defaultMaxWeight + backpackModifier)
+	-- else
+	--  	xPlayer.setMaxWeight(defaultMaxWeight)
+	-- end
 
 	MySQL.Async.execute('UPDATE users SET skin = @skin, firstname = @firstname, lastname = @lastname, dateofbirth = @dateofbirth, sex = @sex WHERE identifier = @identifier', {
 		['@skin'] = skin,
