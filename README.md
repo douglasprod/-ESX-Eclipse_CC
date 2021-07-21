@@ -89,8 +89,7 @@ end)
 ```
 Start your server.
 
-For more questions https://discord.gg/4TJSZF4AWH
-
+For more questions https://discord.gg/8nXR6rfB2C
 
 
 
